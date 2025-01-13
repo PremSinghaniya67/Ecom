@@ -1,6 +1,6 @@
-if(process.env.NODE_ENV !== 'production'){
+// if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
-}
+// }
 
 const express = require('express');
 const app = express();
@@ -17,6 +17,8 @@ const seedDB = require('./seed')
 const MongoStore = require('connect-mongo');
 
 const MONGODB_URL = process.env.MONGODB_URL || 'mongodb://localhost:27017/shopping-prem-app';
+// const MONGODB_URL = 'mongodb://localhost:27017/shopping-prem-app';
+
 
 mongoose.set('strictQuery', true);
 mongoose.connect(MONGODB_URL)
