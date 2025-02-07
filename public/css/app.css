@@ -3,11 +3,21 @@
     --main-color:#0077b6;
 }
 
-
 main{
-    margin-top: 5.5rem;
+    margin-top: 3.5rem;
+    /* height: 80vh; */
+    padding: 40px;
 }
+.mode-light{
+    background-color: wheat;
+    /* color: black; */
 
+}
+.mode-dark{
+    background-color: #141212;
+    /* color: white; */
+
+}
 
 .products .card img{
     height: 210px;
@@ -20,7 +30,9 @@ main{
 }
 
 .show-btn:hover{
-    color: white;
+    /* color: rgb(95, 94, 94); */
+    color: wheat;
+    cursor: pointer;
 }
 
 .navbar-brand {
@@ -63,4 +75,11 @@ footer{
 
 .fas.fa-heart{
     color: red;
+}
+.row{
+    gap: 3em;
+    flex-direction: row;
+}
+.card{
+    height: 100%;
 }

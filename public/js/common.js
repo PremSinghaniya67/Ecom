@@ -33,3 +33,16 @@ for(let btn of allLikeButton){
         likeButton(productId,btn);
     })
 }
+
+const modeBtn=document.querySelector('.mode')
+const modeIcon=document.querySelector('#mode')
+const main=document.querySelector('main')
+modeBtn.addEventListener('click',()=>{
+    modeIcon.classList.toggle('bi-brightness-high-fill')
+    modeIcon.classList.toggle('bi-moon')
+
+    main.classList.toggle('mode-dark')
+    main.classList.toggle('mode-light')
+
+
+})
