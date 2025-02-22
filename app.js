@@ -85,7 +85,7 @@ const reviewRoutes = require('./routes/review');
 const authRoutes = require('./routes/auth');
 const cartRoutes = require('./routes/cart');
 const productApi = require('./routes/api/productapi');
-const paymentRoutes = require('./routes/payment');
+// const paymentRoutes = require('./routes/payment');
 
 
 app.get('/' , (req,res)=>{
@@ -98,7 +98,7 @@ app.use(reviewRoutes);
 app.use(authRoutes);
 app.use(cartRoutes);
 app.use(productApi);
-app.use(paymentRoutes);
+// app.use(paymentRoutes);
 
 
 const port = 5000;
