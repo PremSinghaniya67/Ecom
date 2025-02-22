@@ -12,7 +12,7 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const passport =  require('passport');
 const LocalStrategy =  require('passport-local');
-const User = require('./models/User');
+const User = require('./models/User'); 
 const seedDB = require('./seed')
 const MongoStore = require('connect-mongo');
 
@@ -29,7 +29,9 @@ mongoose.connect(MONGODB_URL)
 app.engine('ejs', ejsMate); //layout folder feature is inside ejsMate
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
 app.set('layout', 'layouts/boilerplate');
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));

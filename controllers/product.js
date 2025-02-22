@@ -79,7 +79,7 @@ const deleteProduct = async (req, res) => {
     
     try {
         const { id } = req.params;
-        await Product.findByIdAndDelete(id);
+        await Product.findByIdAndDelete(id); //and use middleware in model to delete reviews as well 
         res.redirect('/products');
     }
     catch (e) {

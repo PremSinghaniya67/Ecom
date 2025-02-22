@@ -10,17 +10,13 @@ main{
 }
 .mode-light{
     background-color: wheat;
-    /* color: black; */
-
-}
-.mode-dark{
-    background-color: #141212;
-    /* color: white; */
+    /* color: black; */ 
 
 }
 
 .products .card img{
-    height: 210px;
+    height: 210px; 
+    width: 210px;
     padding: 10px;
 }
 
@@ -80,6 +76,4 @@ footer{
     gap: 3em;
     flex-direction: row;
 }
-.card{
-    height: 100%;
-}
+
