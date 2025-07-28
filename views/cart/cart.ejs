@@ -2,6 +2,7 @@
 
 
 <section class="container">
+  <%- include('../partials/flash')  %> 
   <h1 class="display-6">My Cart</h1>
     <div class="row">
         <div class="col-lg-8">
@@ -33,7 +34,7 @@
             </ul>
             
             <!-- form for payment request  -->
-            <form action="/payment_gateway/payumoney" method="POST">
+            <form action="/payment_gateway/payumoney" method="GET">
               <input type="hidden" name="amount" value="<%=totalAmount%>"/>
               <input type="hidden" name="phone" value="9999999999" />
               <input type="hidden" name="service_provider" 

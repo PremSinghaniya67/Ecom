@@ -6,8 +6,8 @@ const Product = require("./models/Product");
 
 const isLoggedIn = (req,res,next)=>{
     // console.log(req.originalUrl);
-    // console.log(req.xhr);
-    if(req.xhr && !req.isAuthenticated()){
+    // console.log(req.xhr); //checks whether the incoming HTTP request was made using an XMLHttpRequest (XHR) — typically via AJAX calls from the client side.
+    if(req.xhr && !req.isAuthenticated()){ //req.isAuthenticated() is a method provided by Passport.js, a popular authentication middleware for Node.js.
         return res.status(401).json({msg:'you need to login first'});
     }
     
