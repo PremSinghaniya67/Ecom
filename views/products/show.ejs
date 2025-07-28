@@ -12,8 +12,8 @@
                 <div class="card-body">
                 <h5 class="card-title"><%= product.name %> </h5>
                 <p class="card-text"><%= product.desc %></p>
-                <h5 class="card-title">$ <%= product.price %> </h5>
-                <a href="#" class="btn btn-success btn-sm">Buy</a>
+                <h5 class="card-title">$ <%= product.price %> </h5>    
+                <a href="/user/cart" class="btn btn-success btn-sm">Buy</a>
                 <form class="d-inline-block" action="/user/<%=product._id%>/add" method="POST">
                     <button>Add To Cart</button>
                 </form>

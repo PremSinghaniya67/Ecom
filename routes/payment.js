@@ -1,16 +1,12 @@
 const express = require('express');
+const { isLoggedIn } = require('../middleware');
 const router = express.Router();
 
 
-
-
-router.post('/payment_gateway/payumoney', isLoggedIn, (req, res) => {
+router.get('/payment_gateway/payumoney', isLoggedIn, (req, res) => {
+    req.flash('error' , "Payment is Under Maintence. Please checkout later !");
     res.redirect('/user/cart');
 })
-
-
-
-
 
 
 

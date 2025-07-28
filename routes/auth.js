@@ -37,7 +37,7 @@ router.post('/register' , async(req,res)=>{
     }
     catch(e){
         req.flash('error' , e.message);
-        return res.redirect('/products');
+        return res.redirect('/register');
     }
 })
 
@@ -49,7 +49,7 @@ router.get('/login' , (req,res)=>{
 router.post('/login',
     passport.authenticate('local', { 
        failureRedirect: '/login', 
-       failureMessage: true ,
+       failureMessage :"Login Failed",
     }),
     function(req, res) {
         // console.log(req.user);
